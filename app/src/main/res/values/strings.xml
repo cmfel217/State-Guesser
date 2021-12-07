@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">State Guesser</string>
     <string name="States">TODO</string>
+    <string name="guess_the_state">Guess the State</string>
+    <string name="start">Start</string>
 </resources>
