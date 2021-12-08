@@ -10,9 +10,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //set variable stateImage equal to the imageview
         var stateImage = findViewById<ImageView>(R.id.imageView)
         stateImage.setOnClickListener{
-        
+
         }
     }
 }
