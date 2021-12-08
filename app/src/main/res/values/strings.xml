@@ -3,4 +3,5 @@
     <string name="States">TODO</string>
     <string name="guess_the_state">Guess the State</string>
     <string name="start">Start</string>
+    <string name="guess">Guess</string>
 </resources>
