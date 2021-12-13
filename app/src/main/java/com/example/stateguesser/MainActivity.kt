@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
+import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,6 +20,12 @@ class MainActivity : AppCompatActivity() {
         startButton.setOnClickListener {
             isVisible(startButton)
             imageViewPicture.setImageResource(R.drawable.download5)
+        }
+        val textAnswer = findViewById<TextView>(R.id.gtstextbox)
+        val textInside: String = textAnswer.text.toString()
+        val guessButton = findViewById<Button>(R.id.submitbutton)
+        guessButton.setOnClickListener {
+            if(textInside == "Arizona") imageViewPicture.setImageResource(R.drawable.download7)
         }
     }
      fun isVisible(v: Button){
