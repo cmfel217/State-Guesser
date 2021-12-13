@@ -4,4 +4,6 @@
     <string name="guess_the_state">Guess the State</string>
     <string name="start">Start</string>
     <string name="guess">Guess</string>
+    <string name="_0">0</string>
+    <string name="_guess">guess</string>
 </resources>
