@@ -3,6 +3,8 @@ package com.example.stateguesser
 import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 
 class MainActivity : AppCompatActivity() {
@@ -11,9 +13,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //set variable stateImage equal to the imageview
-        var stateImage = findViewById<ImageView>(R.id.imageView)
-        stateImage.setOnClickListener{
-
+        val startButton = findViewById<Button>(R.id.button)
+        val imageViewPicture = findViewById<ImageView>(R.id.imageView)
+        startButton.setOnClickListener {
+            isVisible(startButton)
+            imageViewPicture.setImageResource(R.drawable.download5)
         }
+    }
+     fun isVisible(v: Button){
+        v.visibility = View.INVISIBLE
     }
 }
