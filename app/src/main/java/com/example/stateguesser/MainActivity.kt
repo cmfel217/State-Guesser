@@ -22,16 +22,17 @@ class MainActivity : AppCompatActivity() {
         val guessButton = findViewById<Button>(R.id.submitbutton)
         val gtsTextView = findViewById<TextView>(R.id.gtstextbox)
         val pointTextView = findViewById<TextView>(R.id.PointTextView)
+        gtsTextView.text = ""
         guessButton.setOnClickListener {
             if(gtsTextView.text.toString() == "Arizona")
             {
-                imageViewPicture.setImageResource(R.drawable.download7)
+                imageViewPicture.setImageResource(R.drawable.california)
                 gtsTextView.text = ""
                 pointTextView.text = 100.toString()
             }
             else
             {
-                imageViewPicture.setImageResource(R.drawable.download7)
+                imageViewPicture.setImageResource(R.drawable.california)
                 gtsTextView.text = ""
                 pointTextView.text = "-100"
             }
