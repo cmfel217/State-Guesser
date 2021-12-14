@@ -1,13 +1,11 @@
 package com.example.stateguesser
 
-import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,14 +19,25 @@ class MainActivity : AppCompatActivity() {
             isVisible(startButton)
             imageViewPicture.setImageResource(R.drawable.download5)
         }
-        val textAnswer = findViewById<TextView>(R.id.gtstextbox)
-        val textInside: String = textAnswer.text.toString()
         val guessButton = findViewById<Button>(R.id.submitbutton)
+        val gtsTextView = findViewById<TextView>(R.id.gtstextbox)
+        val pointTextView = findViewById<TextView>(R.id.PointTextView)
         guessButton.setOnClickListener {
-            if(textInside == "Arizona") imageViewPicture.setImageResource(R.drawable.download7)
+            if(gtsTextView.text.toString() == "Arizona")
+            {
+                imageViewPicture.setImageResource(R.drawable.download7)
+                gtsTextView.text = ""
+                pointTextView.text = 100.toString()
+            }
+            else
+            {
+                imageViewPicture.setImageResource(R.drawable.download7)
+                gtsTextView.text = ""
+                pointTextView.text = "-100"
+            }
         }
     }
-     fun isVisible(v: Button){
+     private fun isVisible(v: Button){
         v.visibility = View.INVISIBLE
     }
 }
