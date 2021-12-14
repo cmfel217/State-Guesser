@@ -30,6 +30,12 @@ class MainActivity : AppCompatActivity() {
                 gtsTextView.text = ""
                 pointTextView.text = 100.toString()
             }
+            else if (gtsTextView.text.toString() == "California")
+            {
+                imageViewPicture.setImageResource(R.drawable.georgia)
+                gtsTextView.text = ""
+                pointTextView.text = "200"
+            }
             else
             {
                 imageViewPicture.setImageResource(R.drawable.california)
